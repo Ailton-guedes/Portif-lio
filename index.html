@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio</title>
+</head>
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+           <li>
+            <a href="#inicio" class="menu-link">Início</a>
+           </li>
+            <li>
+            <a href="#sobre" class="menu-link">Sobre</a>
+           </li>
+            <li>
+            <a href="#projetos" class="menu-link">Projetos</a>
+           </li>
+            <li>
+            <a href="#contatos" class="menu-link">Contatos</a>
+           </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+            <img src="img/perfil.jpg" alt="Foto de Ailton Guedes" class="foto-perfil">
+            <h1>Ailton Guedes</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor</p>
+</main>
+<section id="sobre" class="sobre">
+    <h2 class="sobre-titulilo">Sobre Mim</h2>
+    <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+            Estudante de Análise e Desenvolvimento de Sistemas em transição de carreira. Especializando em Python para automação e análise de dados, com domínio em JavaScript, SQL e tecnologias Web.
+Foco na transformação de processos manuais em fluxos automáticos e eficientes. Busco minha primeira oportunidade como Desenvolvedor Junior
+, unindo maturidade profissional e competência técnica para gerar impacto imediato na produtividade da equipe.
+        </p>
+    </div>
+</section>
+
+<section id="projetos" class="projetos">
+    <h2 class="projetos-titulos">Meus Projetos</h2>
+    <div class="projetos-caixa">
+
+<div class="projetos-card">
+            <img src="img/projeto1.jpg" alt="Projeto 1" class="projeto-imagem">
+            <div class="caixa-texto-projeto">
+            <h3 class="info-projetos">Sistema de agendamento</h3>
+            <p class="paragrafo-projetos">Plataforma Integrada de Agendamento: Gestão de alunos, aulas e sincronização de agenda em tempo real</p>
+            </div>
+        </div>
+
+<div class="projetos-card">
+            <img src="img/projeto2.jpg" alt="Projeto 1" class="projeto-imagem">
+            <div class="caixa-texto-projeto">
+            <h3 class="info-projetos">Automação com Python</h3>
+            <p class="paragrafo-projetos">Scripts inteligentes para automação de tarefas manuais no Windows/Desktop, utilizando a biblioteca PyAutoGUI para ganho de produtividade.</p>
+  
+            </div>
+        </div>
+
+<div class="projetos-card">
+            <img src="img/projeto3.jpg" alt="Projeto 1" class="projeto-imagem">
+             <div class="caixa-texto-projeto">
+            <h3 class="info-projetos">Jogo classico Space Invaders </h3>
+            <p class="paragrafo-projetos">Releitura moderna do clássico arcade desenvolvida com JavaScript e HTML5 Canvas, focada na aplicação de Programação Orientada a Objetos (POO) para o gerenciamento de entidades dinâmicas.</p>
+            </div>
+        </div>
+
+    </div>
+
+<section id="contatos" class="contatos">
+    <h2 class="contatos-titulos">Entre em Contato</h2>
+    <form class="formulario-contatos" id="formulario" onsubmit="enviarWars(event)">
+        <div class="grupo-form">
+            <input placeholder="Nome" class="campo-form" id="nome" required>
+        </div>
+        <div class="grupo-form">
+            <textarea class="campo-form" placeholder="Digite sua mensagem" rows="5" id="mensagem" required></textarea>
+        </div>
+
+        <button type="submit" class="botao-form">Enviar whatsApp </button>
+    </form>
+</section>
+
+<div class="redes-sociais">
+    <a href="https://www.linkedin.com/in/ailtonguedes/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Ailton-guedes" target="_blank">GitHub</a>
+</div>
+</section>
+<script>
+
+   function enviarWars(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const telefone = '5561992685731';
+
+    const texto = `Olá! Me chamo ${nome}.\n${mensagem}`;
+    const msgFormatada = encodeURIComponent(texto);
+
+    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+    window.open(url, '_blank');
+}
+
+</script>
+
+</body>
+</html>
